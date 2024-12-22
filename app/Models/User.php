@@ -35,6 +35,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+
+    public function images()
+    {
+        return $this->hasMany('App\Models\Image');
+    }
     /**
      * Get the attributes that should be cast.
      *

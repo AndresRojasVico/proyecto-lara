@@ -21,7 +21,7 @@ class Image extends Model
     }
 
     //Relacon con los usuarios de many to one
-    public function users()
+    public function user()
     {
         return $this->belongsTo('App\Models\User', 'user_id');
     }

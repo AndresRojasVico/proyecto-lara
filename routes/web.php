@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Image;
 
 Route::get('/', function () {
+
+    /*
     $images = Image::all();
 
     foreach ($images as $image) {
@@ -20,8 +23,12 @@ Route::get('/', function () {
         }
     }
     die();
+    */
     return view('welcome');
 });
+
+
+Route::get('/usuarioEdit', [UserController::class, 'edit'])->name('user.edit');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
